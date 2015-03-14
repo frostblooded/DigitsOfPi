@@ -60,7 +60,11 @@ int main()
 
     calculate_pi(&pi);
 
-    print_digit(pi, 314);
+    int n;
+    cout << "Which digit do you want? Validity of numbers not guaranteed after 315." << endl;
+    cin >> n;
+
+    print_digit(pi, n);
 
     mpfr_clear(pi);
 
