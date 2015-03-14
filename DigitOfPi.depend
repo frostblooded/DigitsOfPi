@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1426334374 source:/home/nikolay/Desktop/DigitOfPi/main.cpp
+	<iostream>
+	<mpfr.h>
+
+1035175203 /home/nikolay/Desktop/DigitOfPi/gmp/include/gmp.h
+	<iosfwd>
+	<cstddef>
+	<stddef.h>
+
+1035175203 /home/nikolay/Downloads/gmp/include/gmp.h
+	<iosfwd>
+	<cstddef>
+	<stddef.h>
+
+1426323692 /home/nikolay/Desktop/DigitOfPi/gmp-6.0.0/gmp.h
+	<iosfwd>
+	<cstdio>
+	<stddef.h>
+
