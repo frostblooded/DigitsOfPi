@@ -37,6 +37,9 @@ void calculate_pi(mpfr_t *src)
         mpfr_add(*src, *src, current, MPFR_RNDD);
     }
 
+    mpfr_clear(supporter);
+    mpfr_clear(current);
+
     mpfr_sub_d(*src, *src, 3, MPFR_RNDD);
 }
 
@@ -48,15 +51,21 @@ int main()
 
     calculate_pi(&pi);
 
-    mpfr_out_str(stdout, 10, 162, pi, MPFR_RNDD);
+    mpfr_out_str(stdout, 10, 162, pi, MPFR_RNDD); // 161 + 1
+
     cout << endl;
     cout << endl;
-    mpfr_out_str(stdout, 10, 272, pi, MPFR_RNDD);
+
+    mpfr_out_str(stdout, 10, 272, pi, MPFR_RNDD); // 271 + 1
+
     cout << endl;
     cout << endl;
-    mpfr_out_str(stdout, 10, 315, pi, MPFR_RNDD);
+
+    mpfr_out_str(stdout, 10, 315, pi, MPFR_RNDD); // 314 + 1
+
     cout << endl;
     cout << endl;
+
     mpfr_clear(pi);
 
     return 0;
