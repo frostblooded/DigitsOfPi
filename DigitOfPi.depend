@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1426336418 source:/home/nikolay/Desktop/DigitOfPi/main.cpp
+1426336785 source:/home/nikolay/Desktop/DigitOfPi/main.cpp
 	<iostream>
 	<mpfr.h>
 

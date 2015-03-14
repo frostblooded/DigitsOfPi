@@ -5,14 +5,12 @@
 #define PRECISION 1100
 #define NUMERIC_SYSTEM 10
 
-using namespace std;
-
 void print_digit(mpfr_t num, int digit)
 {
     char pi_str[digit + 1];
     mpfr_exp_t exponent; //not needed for program to work, but required by function
     mpfr_get_str(pi_str, &exponent, NUMERIC_SYSTEM, digit + 1, num, MPFR_RNDD);
-    cout << pi_str[digit] << endl;
+    std::cout << pi_str[digit] << std::endl;
 }
 
 void calculate_pi(mpfr_t *src)
@@ -61,11 +59,10 @@ int main()
     calculate_pi(&pi);
 
     int n;
-    cout << "Which digit do you want? Validity of numbers not guaranteed after 315." << endl;
-    cin >> n;
+    std::cout << "Which digit do you want? Validity of numbers not guaranteed after 315." << std::endl;
+    std::cin >> n;
 
     print_digit(pi, n);
-
     mpfr_clear(pi);
 
     return 0;
