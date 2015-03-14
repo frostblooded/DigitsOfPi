@@ -3,8 +3,17 @@
 
 #define ITERATIONS 1100
 #define PRECISION 1100
+#define NUMERIC_SYSTEM 10
 
 using namespace std;
+
+void print_digit(mpfr_t num, int digit)
+{
+    char pi_str[digit + 1];
+    mpfr_exp_t exponent; //not needed for program to work, but required by function
+    mpfr_get_str(pi_str, &exponent, NUMERIC_SYSTEM, digit + 1, num, MPFR_RNDD);
+    cout << pi_str[digit] << endl;
+}
 
 void calculate_pi(mpfr_t *src)
 {
@@ -51,20 +60,7 @@ int main()
 
     calculate_pi(&pi);
 
-    mpfr_out_str(stdout, 10, 162, pi, MPFR_RNDD); // 161 + 1
-
-    cout << endl;
-    cout << endl;
-
-    mpfr_out_str(stdout, 10, 272, pi, MPFR_RNDD); // 271 + 1
-
-    cout << endl;
-    cout << endl;
-
-    mpfr_out_str(stdout, 10, 315, pi, MPFR_RNDD); // 314 + 1
-
-    cout << endl;
-    cout << endl;
+    print_digit(pi, 314);
 
     mpfr_clear(pi);
 
